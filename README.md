@@ -38,3 +38,4 @@ To run this project locally, simply open the `index.html` file in your web brows
 -   SDG image files (`E_SDG_PRINT-01.jpg` to `E_SDG_PRINT-17.jpg`): Images for the SDG grid.
 
 ## Made with ❤️ by Aditya Singh 
+This is Jatin Teotia
