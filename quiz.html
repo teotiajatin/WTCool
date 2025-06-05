@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Card Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>🌿 Green Card Quiz</h1>
+        <p>Answer these 10 questions to see your Eco-Score and get your personalized Green Card!</p>
+
+        <form id="greenCardQuiz">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Diet Type</p>
+                <p>What is your primary diet?</p>
+                <label><input type="radio" name="q1" value="10" required> 🟩 Vegan</label><br>
+                <label><input type="radio" name="q1" value="5"> 🟨 Vegetarian</label><br>
+                <label><input type="radio" name="q1" value="0"> 🟥 Non-Vegetarian</label><br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Vehicle Usage</p>
+                <p>Which type of vehicle do you use most often?</p>
+                <label><input type="radio" name="q2" value="10" required> 🟩 Electric vehicle, bicycle, or walk</label><br>
+                <label><input type="radio" name="q2" value="5"> 🟨 CNG or public transport</label><br>
+                <label><input type="radio" name="q2" value="0"> 🟥 Petrol or diesel vehicle</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Monthly Electricity Usage</p>
+                <p>How much electricity do you consume per month?</p>
+                <label><input type="radio" name="q3" value="10" required> 🟩 1–100 units</label><br>
+                <label><input type="radio" name="q3" value="5"> 🟨 100–300 units</label><br>
+                <label><input type="radio" name="q3" value="0"> 🟥 300+ units</label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Product Preference</p>
+                <p>Which products do you usually buy?</p>
+                <label><input type="radio" name="q4" value="10" required> 🟩 Reusable and eco-friendly, even if costly</label><br>
+                <label><input type="radio" name="q4" value="5"> 🟨 A mix of both</label><br>
+                <label><input type="radio" name="q4" value="0"> 🟥 Cheap, non-biodegradable products</label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Waste Management</p>
+                <p>How do you dispose of your household waste?</p>
+                <label><input type="radio" name="q5" value="10" required> 🟩 Segregate and recycle/compost</label><br>
+                <label><input type="radio" name="q5" value="5"> 🟨 Segregate but don't recycle/compost</label><br>
+                <label><input type="radio" name="q5" value="0"> 🟥 Mix all waste or dump/burn</label><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Water Usage</p>
+                <p>How do you manage water at home?</p>
+                <label><input type="radio" name="q6" value="10" required> 🟩 Use water-saving appliances and habits</label><br>
+                <label><input type="radio" name="q6" value="5"> 🟨 Try not to waste, but no tools</label><br>
+                <label><input type="radio" name="q6" value="0"> 🟥 Use water carelessly</label><br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. Shopping Bag Habit</p>
+                <p>What do you use when shopping?</p>
+                <label><input type="radio" name="q7" value="10" required> 🟩 Always bring reusable bags</label><br>
+                <label><input type="radio" name="q7" value="5"> 🟨 Sometimes reuse plastic bags</label><br>
+                <label><input type="radio" name="q7" value="0"> 🟥 Use single-use plastic bags</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Planting/Gardening</p>
+                <p>Do you grow plants or maintain green space?</p>
+                <label><input type="radio" name="q8" value="10" required> 🟩 Yes, garden or many plants</label><br>
+                <label><input type="radio" name="q8" value="5"> 🟨 A few indoor plants</label><br>
+                <label><input type="radio" name="q8" value="0"> 🟥 No plants at all</label><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. Air Travel</p>
+                <p>How often do you take flights in a year?</p>
+                <label><input type="radio" name="q9" value="10" required> 🟩 0–1 times</label><br>
+                <label><input type="radio" name="q9" value="5"> 🟨 2–4 times</label><br>
+                <label><input type="radio" name="q9" value="0"> 🟥 More than 5 times</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. Work Style</p>
+                <p>What is your work mode?</p>
+                <label><input type="radio" name="q10" value="10" required> 🟩 Fully remote/work from home</label><br>
+                <label><input type="radio" name="q10" value="5"> 🟨 Hybrid (some days remote)</label><br>
+                <label><input type="radio" name="q10" value="0"> 🟥 Always commute to office</label><br>
+            </div>
+
+            <button type="submit" id="generateCardBtn">Generate Your Green Card</button>
+        </form>
+
+        <div id="cardResult" class="card-result" style="display:none;">
+            <h2>Your Green Card:</h2>
+            <div id="greenCard" class="green-card">
+                <div class="card-header">
+                    <div class="card-title">Green Card</div>
+                </div>
+                <div class="card-profile">
+                    <div class="profile-image-container">
+                        <img src="my pic.jpg" alt="Your Profile Picture" class="profile-pic-card">
+                    </div>
+                    <div class="profile-name">Aditya Singh</div>
+                    <div class="profile-handle">@EcoWarrior</div>
+                    <div class="last-updated">Last updated on <span id="currentDate"></span></div>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Eco-Score</div>
+                        <div class="stat-value"><span id="ecoScore"></span>/100</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Result</div>
+                        <div class="stat-value"><span id="resultText"></span></div>
+                    </div>
+                </div>
+                 <div class="card-footer">
+                     <div class="social-links">
+                         You can find me on...
+                         <!-- Social icons could go here -->
+                     </div>
+                 </div>
+
+            </div>
+            <div class="share-options">
+                <button id="downloadCardBtn">Download Card</button>
+                <button id="shareLinkedInBtn">Share on LinkedIn</button>
+                <button id="shareXBtn">Share on X (Twitter)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html> 
